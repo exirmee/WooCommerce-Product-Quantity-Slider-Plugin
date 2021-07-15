@@ -8,7 +8,7 @@
  * Version: 1.0
  * Text Domain: add-slider
  *
- * Copyright: (c) 2021 ,Morteza hatami (m.hatami@live.com)
+ * Copyright: (c) 2021 , Morteza hatami (m.hatami@live.com)
  *
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -33,10 +33,12 @@ function Select_Needed_Value_function()
 	{
 
 		include("template.php");
-		include("js.php");
-		//wp_deregister_style( 'sliderCss' );
-		//wp_register_style( 'sliderCss', plugins_url( '/style.css', __FILE__ ) );
-		//wp_enqueue_style( 'sliderCss' );
+	    //wp_register_script( 'sliderscript', plugins_url( '/script.js', __FILE__ ) );
+		//wp_enqueue_script( 'sliderscript' );
+		//include("js.php");
+		wp_deregister_style( 'sliderCss' );
+		wp_register_style( 'sliderCss', plugins_url( '/style.css', __FILE__ ) );
+		wp_enqueue_style( 'sliderCss' );
 	}
 }
 
